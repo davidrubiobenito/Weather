@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html ng-app="app">
+    <head>
+        <meta charset="UTF-8">
+        <title>Frontend ejemplo para Meteorología en AngularJS</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width">
+
+        <link rel="stylesheet" type="text/css" href="bower_components/bootstrap/dist/css/bootstrap.css">
+        <link rel="stylesheet" type="text/css" href="styles/style.css">
+        <link rel="stylesheet" type="text/css" href="styles/custom.css">
+    </head>
+    <body>
+        <!-- Add nav -->
+        <div ng-include="'views/templates/nav.html'"></div>
+
+        <div class="container">
+            <!-- Add your site or application content here -->
+            <div ng-view=""></div>
+        </div>
+
+        <!-- build:js(.) scripts/vendor.js -->
+        <!-- bower.js -->
+        <script type="text/javascript" src="bower_components/jquery/dist/jquery.js"></script>
+        <script type="text/javascript" src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
+        <script type="text/javascript" src="bower_components/angular/angular.js"></script>
+        <script type="text/javascript" src="bower_components/angular-route/angular-route.js"></script>
+        <script type="text/javascript" src="bower_components/angular-resource/angular-resource.js"></script>
+        <!--endbower-->
+        <!--endbuild-->
+
+        <!-- build:js({.tmp,app}) scripts/scripts.js -->
+        <script type="text/javascript" src="scripts/app.js"></script>
+        <script type="text/javascript" src="scripts/controllers/HomeController.js"></script>
+
+        <script type="text/javascript" src="scripts/factories/CitiesFactory.js"></script>
+        <script type="text/javascript" src="scripts/factories/WeatherFactory.js"></script>
+        <!--endbuild-->
+    </body>
+</html>
