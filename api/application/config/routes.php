@@ -60,13 +60,12 @@ $route['cities']['post'] = 'cities/index';
 $route['cities/(:num)']['put'] = 'cities/index/$1';
 $route['cities/(:num)']['delete'] = 'cities/index/$1';
 
-//Routes for Weather
-$route['weather']['get'] = 'weather/index';
-$route['weather/(:num)']['get'] = 'weather/find/$1';
-$route['weather']['post'] = 'weather/index';
-$route['weather/(:num)']['put'] = 'weather/index/$1';
-$route['weather/(:num)']['delete'] = 'weather/index/$1';
-
+// Routes for forecast
+$route['forecast']['get'] = 'forecast/index';
+$route['forecast/(:num)']['get'] = 'forecast/find/$1';
+$route['forecast']['post'] = 'forecast/index';
+$route['forecast/(:num)']['put'] = 'forecast/index/$1';
+$route['forecast/(:num)']['delete'] = 'forecast/index/$1';
 
 /*
 | -------------------------------------------------------------------------

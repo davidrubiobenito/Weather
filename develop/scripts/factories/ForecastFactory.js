@@ -2,13 +2,13 @@
 
 angular.module('app')
 
-    .factory('Weather',
+    .factory('Forecast',
         [
             '$resource', function ($resource)
         {
             return $resource
             (
-                'http://weatherAPI.dev/weather/:id',
+                'http://weatherAPI.dev/forecast/:id',
                 {id:"@_id"},
                 {update: {method:"PUT", params: {id:"@_id"}}}
             )

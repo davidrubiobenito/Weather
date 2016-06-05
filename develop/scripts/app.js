@@ -2,29 +2,29 @@
 
 angular.module('app', ['ngResource','ngRoute'])
 
-    .config(function ($routeProvider) {
-        $routeProvider
-            .when("/home", {
+    .config(['$routeProvider', function ($routerProvider) {
+        $routerProvider
+            .when('/home', {
                 templateUrl: 'views/templates/list.html',
                 controller: 'HomeCtrl'
             })
-            .when("/edit/:id", {
+            .when('/edit/:id', {
                 templateUrl: 'views/templates/edit.html',
                 controller: 'EditCtrl'
             })
-            .when("/create", {
+            .when('/create/', {
                 templateUrl: 'views/templates/create.html',
                 controller: 'CreateCtrl'
             })
-            .when("/add_weather", {
-                templateUrl: 'views/templates/add_weather.html',
-                controller: 'AddWeatherCtrl'
+            .when('/addForecast/', {
+                templateUrl: 'views/templates/addForecast.html',
+                controller: 'AddForecastCtrl'
             })
-             .when("/wiew/:id", {
+            .when('/view/:id', {
                 templateUrl: 'views/templates/view.html',
                 controller: 'ViewCtrl'
             })
-            .otherwise({ redirectTo: '/home'});
-    }
+            .otherwise({redirectTo: '/home'});
+    }]
 );
 
